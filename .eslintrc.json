@@ -1,0 +1,76 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:jsx-a11y/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module",
+		"project": ["./tsconfig.json"]
+	},
+	"plugins": ["react", "@typescript-eslint", "import"],
+	"rules": {
+		"no-console": 2,
+		"semi": 0,
+		"@typescript-eslint/no-explicit-any": 0,
+		"@typescript-eslint/explicit-module-boundary-types": 0,
+		"@typescript-eslint/no-empty-interface": 0,
+		"@typescript-eslint/ban-types": 0,
+		"@typescript-eslint/no-inferrable-types": 0,
+		"@typescript-eslint/triple-slash-reference": 0,
+		"react/jsx-uses-react": 0,
+		"react/react-in-jsx-scope": 0,
+		"import/order": [
+			"error",
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"index"
+				],
+				"pathGroups": [
+					{
+						"pattern": "react",
+						"group": "external",
+						"position": "before"
+					},
+					{
+						"pattern": "assets/**",
+						"group": "internal",
+						"position": "after"
+					},
+					{
+						"pattern": "common/**",
+						"group": "internal",
+						"position": "after"
+					},
+					{
+						"pattern": "pages/**",
+						"group": "internal",
+						"position": "after"
+					}
+				],
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				},
+				"newlines-between": "always",
+				"pathGroupsExcludedImportTypes": ["react"]
+			}
+		]
+	}
+}
