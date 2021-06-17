@@ -1,9 +1,17 @@
 {
-  "cSpell.words": ["Serializers", "nestjs"],
-  "editor.formatOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	"cSpell.words": [
+		"Nunito",
+		"Serializers",
+		"focusring",
+		"monospace",
+		"nestjs",
+		"textfield",
+		"truetype"
+	],
+	"editor.formatOnSave": true,
+	"eslint.alwaysShowStatus": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
 }
