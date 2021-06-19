@@ -1,5 +1,7 @@
+import { ApolloProvider } from '@apollo/client'
 import { ThemeProvider } from 'styled-components'
 
+import client from 'common/qraphql'
 import { getGlobalStyle } from 'common/styles'
 import theme from 'common/styles/theme'
 
@@ -9,7 +11,9 @@ const App = () => (
 	<>
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
-			<Pages />
+			<ApolloProvider client={client}>
+				<Pages />
+			</ApolloProvider>
 		</ThemeProvider>
 	</>
 )

@@ -236,6 +236,8 @@ export const getGlobalStyle = () => createGlobalStyle`
     body {
         margin: 0;
         font-family: ${(props) => props.theme.fontFamily.prompt};
+        font-size: ${(props) => props.theme.fontSize.default};
+        font-weight: ${(props) => props.theme.fontWeight.regular}
     }
 
     main {
